@@ -118,10 +118,6 @@ const Footer = () => {
                 <span className="text-sm opacity-80">+91 8766251527</span>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin size={18} className="opacity-70 mt-0.5" />
-                <span className="text-sm opacity-80">India</span>
-              </li>
-              <li className="flex items-start gap-3">
                 <Facebook size={18} className="opacity-70 mt-0.5" />
                 <a 
                   href="https://www.facebook.com/profile.php?id=61572955498498" 
