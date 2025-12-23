@@ -61,7 +61,10 @@ const Header = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.6 }}
             >
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium">
+              <Button 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Get in Touch
               </Button>
             </motion.div>
@@ -98,7 +101,13 @@ const Header = () => {
                   {link.name}
                 </a>
               ))}
-              <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button 
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                onClick={() => {
+                  setIsOpen(false);
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Get in Touch
               </Button>
             </nav>
