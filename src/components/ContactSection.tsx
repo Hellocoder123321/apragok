@@ -45,12 +45,6 @@ const ContactSection = () => {
       subtitle: "Mon-Sat, 9:00 AM - 6:00 PM",
     },
     {
-      icon: MapPin,
-      title: "Visit Us",
-      content: "India",
-      subtitle: "By appointment only",
-    },
-    {
       icon: Clock,
       title: "Working Hours",
       content: "Monday - Saturday",
