@@ -173,19 +173,19 @@ const ContactSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                  className="bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+                  className="bg-card border border-border rounded-2xl p-5 hover:shadow-lg transition-shadow duration-300"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <info.icon className="text-primary" size={24} />
+                  <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
+                    <info.icon className="text-primary" size={20} />
                   </div>
-                  <h4 className="text-lg font-semibold text-foreground mb-1">
+                  <h4 className="text-base font-semibold text-foreground mb-1">
                     {info.title}
                   </h4>
-                  <p className="text-foreground font-medium">{info.content}</p>
+                  <p className="text-sm text-foreground font-medium break-all">{info.content}</p>
                   {info.secondaryContent && (
-                    <p className="text-foreground font-medium text-sm">{info.secondaryContent}</p>
+                    <p className="text-xs text-foreground font-medium break-all mt-0.5">{info.secondaryContent}</p>
                   )}
-                  <p className="text-sm text-muted-foreground">{info.subtitle}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{info.subtitle}</p>
                 </motion.div>
               ))}
             </div>
