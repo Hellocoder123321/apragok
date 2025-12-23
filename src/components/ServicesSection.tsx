@@ -132,6 +132,7 @@ const ServicesSection = () => {
           <Button
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground text-base font-medium px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-primary/20"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Request a Consultation
           </Button>
