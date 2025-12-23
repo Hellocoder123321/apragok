@@ -183,28 +183,6 @@ const ContactSection = () => {
                 </motion.div>
               ))}
             </div>
-
-            {/* Map placeholder */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.9 }}
-              className="bg-card border border-border rounded-xl p-8 text-center"
-            >
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="text-primary" size={32} />
-              </div>
-              <h4 className="text-xl font-serif font-bold text-foreground mb-2">
-                Connect with Dr. Priyanka Verma
-              </h4>
-              <p className="text-muted-foreground mb-4">
-                For personalized consultations, speaking engagements, 
-                or collaboration opportunities.
-              </p>
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                Schedule a Meeting
-              </Button>
-            </motion.div>
           </motion.div>
         </div>
       </div>
