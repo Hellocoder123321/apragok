@@ -35,7 +35,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email Us",
-      content: "contact@apraknowledge.com",
+      content: "apra.publication@gmail.com",
       subtitle: "We'll respond within 24 hours",
     },
     {
