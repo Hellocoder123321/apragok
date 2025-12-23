@@ -45,12 +45,6 @@ const ContactSection = () => {
       content: "+91 8766251527",
       subtitle: "Mon-Fri, 10:00AM - 5:00 PM",
     },
-    {
-      icon: Clock,
-      title: "Working Hours",
-      content: "Monday - Saturday",
-      subtitle: "9:00 AM - 6:00 PM IST",
-    },
   ];
 
   return (
