@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BookOpen, Mail, Phone, MapPin } from "lucide-react";
+import { BookOpen, Mail, Phone, MapPin, Facebook } from "lucide-react";
 import apraLogo from "@/assets/apra-logo.jpeg";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -120,6 +120,17 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="opacity-70 mt-0.5" />
                 <span className="text-sm opacity-80">India</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Facebook size={18} className="opacity-70 mt-0.5" />
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61572955498498" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm opacity-80 hover:opacity-100 transition-opacity"
+                >
+                  Follow us on Facebook
+                </a>
               </li>
             </ul>
           </motion.div>
