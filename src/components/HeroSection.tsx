@@ -63,7 +63,7 @@ const HeroSection = () => {
             y: 0
           }} transition={{
             delay: 0.5
-          }} className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">Publishing transformative books and conducting insightful workshops, seminars and trainings.<strong className="text-foreground">Dr. Priyanka Verma</strong>
+          }} className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">Publishing transformative books and conducting insightful workshops, seminars and trainings.
             </motion.p>
 
             <motion.div initial={{
