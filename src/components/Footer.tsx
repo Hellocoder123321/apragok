@@ -1,42 +1,40 @@
 import { motion } from "framer-motion";
 import { BookOpen, Mail, Phone, MapPin } from "lucide-react";
 import apraLogo from "@/assets/apra-logo.jpeg";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Contact", href: "#contact" },
-  ];
-
-  const services = [
-    "Book Publications",
-    "Workshops",
-    "Training Programs",
-    "Consulting",
-  ];
-
-  return (
-    <footer className="bg-foreground text-background">
+  const quickLinks = [{
+    name: "Home",
+    href: "#home"
+  }, {
+    name: "About",
+    href: "#about"
+  }, {
+    name: "Services",
+    href: "#services"
+  }, {
+    name: "Contact",
+    href: "#contact"
+  }];
+  const services = ["Book Publications", "Workshops", "Training Programs", "Consulting"];
+  return <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Main Footer */}
         <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6
+        }} viewport={{
+          once: true
+        }}>
             <div className="flex items-center gap-3 mb-6">
-              <img
-                src={apraLogo}
-                alt="APRA Logo"
-                className="h-12 w-12 rounded-full object-cover"
-              />
+              <img src={apraLogo} alt="APRA Logo" className="h-12 w-12 rounded-full object-cover" />
               <div>
                 <h3 className="text-xl font-serif font-bold">APRA</h3>
                 <p className="text-xs opacity-70">Group of Knowledge</p>
@@ -53,56 +51,69 @@ const Footer = () => {
           </motion.div>
 
           {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6,
+          delay: 0.1
+        }} viewport={{
+          once: true
+        }}>
             <h4 className="text-lg font-serif font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-sm opacity-70 hover:opacity-100 transition-opacity"
-                  >
+              {quickLinks.map(link => <li key={link.name}>
+                  <a href={link.href} className="text-sm opacity-70 hover:opacity-100 transition-opacity">
                     {link.name}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </motion.div>
 
           {/* Services */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6,
+          delay: 0.2
+        }} viewport={{
+          once: true
+        }}>
             <h4 className="text-lg font-serif font-semibold mb-6">Services</h4>
             <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service}>
+              {services.map(service => <li key={service}>
                   <span className="text-sm opacity-70">{service}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </motion.div>
 
           {/* Contact */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6,
+          delay: 0.3
+        }} viewport={{
+          once: true
+        }}>
             <h4 className="text-lg font-serif font-semibold mb-6">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail size={18} className="opacity-70 mt-0.5" />
-                <span className="text-sm opacity-80">contact@apraknowledge.com</span>
+                <span className="text-sm opacity-80 text-[#b7b2ae]">apra.publication@gmail.com
+
+              </span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={18} className="opacity-70 mt-0.5" />
@@ -128,8 +139,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
