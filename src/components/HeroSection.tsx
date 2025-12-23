@@ -33,7 +33,8 @@ const HeroSection = () => {
             delay: 0.2
           }} className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full text-sm text-secondary-foreground mb-6">
               <BookOpen size={16} className="text-primary" />
-              <span>Empowering Knowledge Since Inception</span>
+              <span>Inspiring Minds, Empowering Futures
+            </span>
             </motion.div>
 
             <motion.h1 initial={{
@@ -61,7 +62,7 @@ const HeroSection = () => {
             y: 0
           }} transition={{
             delay: 0.5
-          }} className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">Publishing transformative books and conducting insightful workshops, seminars and trainings. <strong className="text-foreground">Dr. Priyanka Verma</strong>
+          }} className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">Publishing transformative books and conducting insightful workshops, seminars and trainings.<strong className="text-foreground">Dr. Priyanka Verma</strong>
             </motion.p>
 
             <motion.div initial={{
