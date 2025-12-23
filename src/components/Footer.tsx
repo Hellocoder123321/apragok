@@ -40,13 +40,11 @@ const Footer = () => {
                 <p className="text-xs opacity-70">Group of Knowledge</p>
               </div>
             </div>
-            <p className="text-sm opacity-80 mb-4">
-              Empowering minds through quality publications and transformative 
-              workshops under the leadership of Dr. Priyanka Verma.
-            </p>
+            <p className="text-sm opacity-80 mb-4">Empowering minds through quality publications and transformative workshops, seminars and trainings. </p>
             <div className="flex items-center gap-2">
               <BookOpen size={18} className="opacity-70" />
-              <span className="text-sm opacity-70">Knowledge is Power</span>
+              <span className="text-sm opacity-70">Inspiring Minds, Empowering Future
+            </span>
             </div>
           </motion.div>
 
