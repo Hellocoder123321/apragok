@@ -166,15 +166,20 @@ const HeroSection = () => {
       }} transition={{
         delay: 1.2
       }} className="mt-16 flex justify-center">
-          <motion.a href="#about" animate={{
-          y: [0, 10, 0]
-        }} transition={{
-          duration: 1.5,
-          repeat: Infinity
-        }} className="flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+          <motion.button
+            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+            animate={{
+              y: [0, 10, 0]
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity
+            }}
+            className="flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+          >
             <span className="text-sm">Scroll to explore</span>
             <ArrowDown size={20} />
-          </motion.a>
+          </motion.button>
         </motion.div>
       </div>
     </section>;
