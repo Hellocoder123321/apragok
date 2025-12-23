@@ -36,6 +36,7 @@ const ContactSection = () => {
       icon: Mail,
       title: "Email Us",
       content: "apra.publication@gmail.com",
+      secondaryContent: "apra.groupofknowledge2024@outlook.com",
       subtitle: "We'll respond within 24 hours",
     },
     {
@@ -181,6 +182,9 @@ const ContactSection = () => {
                     {info.title}
                   </h4>
                   <p className="text-foreground font-medium">{info.content}</p>
+                  {info.secondaryContent && (
+                    <p className="text-foreground font-medium text-sm">{info.secondaryContent}</p>
+                  )}
                   <p className="text-sm text-muted-foreground">{info.subtitle}</p>
                 </motion.div>
               ))}
