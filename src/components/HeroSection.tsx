@@ -82,33 +82,6 @@ const HeroSection = () => {
                 Join Workshops
               </Button>
             </motion.div>
-
-            {/* Stats */}
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            delay: 0.9
-          }} className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-border">
-              {[{
-              number: "50+",
-              label: "Publications"
-            }, {
-              number: "100+",
-              label: "Workshops"
-            }, {
-              number: "5000+",
-              label: "Learners"
-            }].map((stat, index) => <div key={index} className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl font-serif font-bold text-primary">
-                    {stat.number}
-                  </div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
-                </div>)}
-            </motion.div>
           </motion.div>
 
           {/* Right Content - Logo Display */}
