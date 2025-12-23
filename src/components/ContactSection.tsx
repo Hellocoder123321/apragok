@@ -43,7 +43,7 @@ const ContactSection = () => {
       icon: Phone,
       title: "Call Us",
       content: "+91 8766251527",
-      subtitle: "Mon-Sat, 9:00 AM - 6:00 PM",
+      subtitle: "Mon-Fri, 10:00AM - 5:00 PM",
     },
     {
       icon: Clock,
