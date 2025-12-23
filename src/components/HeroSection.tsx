@@ -188,7 +188,7 @@ const HeroSection = () => {
         opacity: 1
       }} transition={{
         delay: 1.2
-      }} className="absolute bottom-8 left-1/2 -translate-x-1/2">
+      }} className="absolute bottom-4 left-1/2 -translate-x-1/2">
           <motion.a href="#about" animate={{
           y: [0, 10, 0]
         }} transition={{
