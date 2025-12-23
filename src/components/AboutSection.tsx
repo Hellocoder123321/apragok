@@ -15,7 +15,7 @@ const AboutSection = () => {
   }, {
     icon: Lightbulb,
     title: "Our Vision",
-    description: "To become a leading platform for knowledge dissemination and skill development across diverse domains."
+    description: "To nurture innovative, enlightened and empowered citizens and educators, fostering a culture of excellence and prosperity for future generations, and contributing meaningfully to the realization of a developed India."
   }, {
     icon: Heart,
     title: "Our Values",
