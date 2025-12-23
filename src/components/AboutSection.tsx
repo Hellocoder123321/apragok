@@ -43,7 +43,7 @@ const AboutSection = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold mt-4 mb-6 text-foreground">
             Nurturing Minds, Shaping Futures
           </h2>
-          <p className="text-lg text-muted-foreground">APRA: Group of Knowledge is dedicated to the noble pursuit of spreading wisdom through quality book publications and engaging educational workshops.<strong className="text-foreground">Dr. Priyanka Verma</strong>, 
+          <p className="text-lg text-muted-foreground">APRA: Group of Knowledge is dedicated to the noble pursuit of spreading wisdom through quality book publications and engaging educational workshops, seminars, conference and trainings. <strong className="text-foreground">Dr. Priyanka Verma</strong>, 
             APRA: Group of Knowledge is dedicated to the noble pursuit of spreading wisdom 
             through quality book publications and engaging educational workshops.
           </p>
