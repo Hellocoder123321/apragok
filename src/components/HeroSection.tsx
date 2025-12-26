@@ -81,12 +81,12 @@ const HeroSection = () => {
                   Explore Publications
                 </Button>
               </Link>
-              <a href="https://chat.whatsapp.com/BPo102iGqdgE3KBVR1rm05" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-base font-medium px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+              <Button asChild size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-base font-medium px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                <a href="https://chat.whatsapp.com/BPo102iGqdgE3KBVR1rm05" target="_blank" rel="noopener noreferrer">
                   <Users className="mr-2" size={20} />
                   Join Workshops
-                </Button>
-              </a>
+                </a>
+              </Button>
             </motion.div>
           </motion.div>
 
