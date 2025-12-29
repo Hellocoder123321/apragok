@@ -21,48 +21,6 @@ const books = [
     author: "APRA Group of Knowledge",
     cover: dincharyaSanatanDharma,
     category: "Spirituality"
-  },
-  {
-    id: 3,
-    title: "Educational Excellence",
-    author: "Dr. Priyanka Verma",
-    cover: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&h=400&fit=crop",
-    category: "Education"
-  },
-  {
-    id: 4,
-    title: "Leadership in Learning",
-    author: "Dr. Priyanka Verma",
-    cover: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300&h=400&fit=crop",
-    category: "Leadership"
-  },
-  {
-    id: 5,
-    title: "Innovative Teaching Methods",
-    author: "Dr. Priyanka Verma",
-    cover: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=300&h=400&fit=crop",
-    category: "Pedagogy"
-  },
-  {
-    id: 6,
-    title: "Empowering Educators",
-    author: "Dr. Priyanka Verma",
-    cover: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=400&fit=crop",
-    category: "Professional Development"
-  },
-  {
-    id: 7,
-    title: "Future of Education",
-    author: "Dr. Priyanka Verma",
-    cover: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=300&h=400&fit=crop",
-    category: "Vision"
-  },
-  {
-    id: 8,
-    title: "Knowledge & Growth",
-    author: "Dr. Priyanka Verma",
-    cover: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop",
-    category: "Self Development"
   }
 ];
 
