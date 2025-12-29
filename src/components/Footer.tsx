@@ -161,7 +161,7 @@ const Footer = () => {
               © {currentYear} APRA: Group of Knowledge. All rights reserved.
             </p>
             <p className="text-sm opacity-60">
-              Founded by Dr. Priyanka Verma
+              Want a website like this?
             </p>
           </div>
         </div>
