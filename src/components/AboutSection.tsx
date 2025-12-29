@@ -106,8 +106,7 @@ const AboutSection = () => {
             </p>
             <div className="flex items-center gap-4 pt-4">
               <div className="w-16 h-1 bg-primary rounded-full" />
-              <span className="text-primary font-medium">Excellence in sharing knowledge
-            </span>
+              <span className="text-primary font-medium">Excellence in sharing knowledge</span>
             </div>
           </motion.div>
         </div>
