@@ -80,7 +80,7 @@ const galleryImages = [
   },
   {
     id: 23,
-    title: "Faculty Meeting",
+    title: "Faculty Development Program (FDP)",
     description: "Collaborative discussion with educators",
     image: workshop23,
   },
