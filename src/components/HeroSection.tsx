@@ -65,7 +65,7 @@ const HeroSection = () => {
             y: 0
           }} transition={{
             delay: 0.2
-          }} className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full text-sm text-secondary-foreground mb-6">
+          }} className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white/90 mb-6 border border-white/20">
               <BookOpen size={16} className="text-primary" />
               <span>Inspiring Minds, Empowering Futures
             </span>
@@ -80,12 +80,12 @@ const HeroSection = () => {
           }} transition={{
             delay: 0.3,
             duration: 0.8
-          }} className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold leading-tight mb-6">
-              <span className="text-foreground">APRA:</span>
+          }} className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold leading-tight mb-8">
+              <span className="text-white">APRA:</span>
               <br />
               <span className="text-primary">Group of</span>
               <br />
-              <span className="text-foreground">Knowledge</span>
+              <span className="text-white">Knowledge</span>
             </motion.h1>
 
             <motion.p initial={{
@@ -96,7 +96,7 @@ const HeroSection = () => {
             y: 0
           }} transition={{
             delay: 0.5
-          }} className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">Publishing transformative books and conducting insightful workshops, seminars and trainings.
+          }} className="text-xl text-white/80 mb-10 max-w-lg mx-auto lg:mx-0">Publishing transformative books and conducting insightful workshops, seminars and trainings.
             </motion.p>
 
             <motion.div initial={{
@@ -117,7 +117,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-base font-medium px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                className="border-2 border-white/50 text-white hover:bg-white hover:text-foreground text-base font-medium px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm"
                 onClick={() => navigate('/workshops')}
               >
                 <Users className="mr-2" size={20} />
@@ -146,14 +146,14 @@ const HeroSection = () => {
               duration: 30,
               repeat: Infinity,
               ease: "linear"
-            }} className="absolute inset-0 -m-8 border-2 border-dashed border-primary/20 rounded-full" />
+            }} className="absolute inset-0 -m-8 border-2 border-dashed border-white/30 rounded-full" />
               <motion.div animate={{
               rotate: -360
             }} transition={{
               duration: 40,
               repeat: Infinity,
               ease: "linear"
-            }} className="absolute inset-0 -m-16 border border-accent/20 rounded-full" />
+            }} className="absolute inset-0 -m-16 border border-white/20 rounded-full" />
               
               {/* Main Logo */}
               <motion.div animate={{
@@ -163,7 +163,7 @@ const HeroSection = () => {
               repeat: Infinity,
               ease: "easeInOut"
             }} className="relative z-10">
-                <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-card">
+                <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-white/30">
                   <img src={apraLogo} alt="APRA - Group of Knowledge" className="w-full h-full object-cover" />
                 </div>
               </motion.div>
@@ -213,7 +213,7 @@ const HeroSection = () => {
               duration: 1.5,
               repeat: Infinity
             }}
-            className="flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+            className="flex flex-col items-center gap-2 text-white/70 hover:text-white transition-colors cursor-pointer"
           >
             <span className="text-sm">Scroll to explore</span>
             <ArrowDown size={20} />
