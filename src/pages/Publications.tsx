@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, BookOpen } from "lucide-react";
+import { ArrowLeft, BookOpen, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -96,6 +96,34 @@ const Publications = () => {
                 </div>
               </motion.div>
             ))}
+            
+            {/* Coming Soon Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: books.length * 0.1 }}
+              className="group"
+            >
+              <div className="bg-card rounded-2xl overflow-hidden shadow-lg border border-dashed border-border hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                {/* Placeholder Cover */}
+                <div className="relative aspect-[3/4] overflow-hidden bg-secondary/50 flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Clock className="w-12 h-12 text-muted-foreground/50 mx-auto mb-4" />
+                    <p className="text-muted-foreground font-medium">Coming Soon</p>
+                  </div>
+                </div>
+                
+                {/* Card Info */}
+                <div className="p-6 flex-1 flex flex-col justify-center">
+                  <h3 className="text-xl font-serif font-semibold text-muted-foreground mb-2">
+                    More Books Coming Soon
+                  </h3>
+                  <p className="text-muted-foreground/70 text-sm">
+                    Stay tuned for upcoming publications
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
