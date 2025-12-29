@@ -160,9 +160,9 @@ const Footer = () => {
             <p className="text-sm opacity-60">
               © {currentYear} APRA: Group of Knowledge. All rights reserved.
             </p>
-            <p className="text-sm opacity-60">
+            <button className="text-sm opacity-60 hover:opacity-100 hover:underline transition-all cursor-pointer">
               Want a website like this?
-            </p>
+            </button>
           </div>
         </div>
       </div>
