@@ -143,11 +143,15 @@ const Publications = () => {
             <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
               Contact us to learn more about our books or to inquire about bulk orders for educational institutions.
             </p>
-            <Link to="/#contact">
+            <a 
+              href="https://wa.me/message/PQ6G2FPVROSKH1" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8">
                 Get in Touch
               </Button>
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>
