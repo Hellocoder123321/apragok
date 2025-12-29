@@ -1,16 +1,47 @@
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowDown, BookOpen, Users } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import apraLogo from "@/assets/apra-logo.jpeg";
+import workshop1 from "@/assets/gallery/workshop-1.jpeg";
+import workshop2 from "@/assets/gallery/workshop-2.jpeg";
+import workshop3 from "@/assets/gallery/workshop-3.jpeg";
+
+const slideshowImages = [workshop1, workshop2, workshop3];
 
 const HeroSection = () => {
   const navigate = useNavigate();
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-3xl" />
+      {/* Slideshow Background */}
+      <div className="absolute inset-0">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="absolute inset-0"
+          >
+            <img 
+              src={slideshowImages[currentSlide]} 
+              alt="Workshop background" 
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </AnimatePresence>
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-background/80" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
