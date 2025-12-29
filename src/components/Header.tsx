@@ -9,6 +9,8 @@ const navLinks = [
   { name: "Home", section: "home" },
   { name: "About", section: "about" },
   { name: "Services", section: "services" },
+  { name: "Publications", section: "publications", isPage: true, path: "/publications" },
+  { name: "Workshops", section: "workshops", isPage: true, path: "/workshops" },
   { name: "Contact", section: "contact" },
 ];
 
@@ -17,8 +19,10 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleNavClick = (section: string) => {
-    if (location.pathname !== "/") {
+  const handleNavClick = (section: string, isPage?: boolean, path?: string) => {
+    if (isPage && path) {
+      navigate(path);
+    } else if (location.pathname !== "/") {
       navigate("/", { state: { scrollTo: section } });
     } else {
       document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
@@ -57,7 +61,7 @@ const Header = () => {
             {navLinks.map((link, index) => (
               <motion.button
                 key={link.name}
-                onClick={() => handleNavClick(link.section)}
+                onClick={() => handleNavClick(link.section, link.isPage, link.path)}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 + 0.3 }}
@@ -107,7 +111,7 @@ const Header = () => {
                   key={link.name}
                   onClick={() => {
                     setIsOpen(false);
-                    handleNavClick(link.section);
+                    handleNavClick(link.section, link.isPage, link.path);
                   }}
                   className="text-foreground hover:text-primary transition-colors py-2 text-left"
                 >

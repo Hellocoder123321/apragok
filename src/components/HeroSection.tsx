@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowDown, BookOpen, Users } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import apraLogo from "@/assets/apra-logo.jpeg";
+
 const HeroSection = () => {
+  const navigate = useNavigate();
   return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -81,7 +83,12 @@ const HeroSection = () => {
                   Explore Publications
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-base font-medium px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-base font-medium px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                onClick={() => navigate('/workshops')}
+              >
                 <Users className="mr-2" size={20} />
                 Join Workshops
               </Button>
