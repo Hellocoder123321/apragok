@@ -141,7 +141,7 @@ const Workshops = () => {
               className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full px-8"
               asChild
             >
-              <a href="/#contact">
+              <a href="https://chat.whatsapp.com/BPo102iGqdgE3KBVR1rm05" target="_blank" rel="noopener noreferrer">
                 Propose a Collaboration
               </a>
             </Button>
