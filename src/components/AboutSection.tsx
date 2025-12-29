@@ -53,21 +53,19 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Founder Card */}
           <motion.div initial={{
-            opacity: 0,
-            x: -50
-          }} animate={isInView ? {
-            opacity: 1,
-            x: 0
-          } : {}} transition={{
-            duration: 0.8,
-            delay: 0.2
-          }}>
+          opacity: 0,
+          x: -50
+        }} animate={isInView ? {
+          opacity: 1,
+          x: 0
+        } : {}} transition={{
+          duration: 0.8,
+          delay: 0.2
+        }}>
             <div className="relative h-full">
               <div className="absolute -top-4 -left-4 w-full h-full bg-primary/10 rounded-2xl" />
               <div className="relative bg-card rounded-2xl p-8 shadow-lg border border-border h-full">
-                <h3 className="text-2xl font-serif font-bold text-foreground mb-4">
-                  Meet Our Founder
-                </h3>
+                <h3 className="text-2xl font-serif font-bold text-foreground mb-4">Meet Our Founder and President</h3>
                 <h4 className="text-xl text-primary font-semibold mb-4">
                   Dr. Priyanka Verma
                 </h4>
@@ -87,15 +85,15 @@ const AboutSection = () => {
 
           {/* Vice-President Card */}
           <motion.div initial={{
-            opacity: 0,
-            x: 50
-          }} animate={isInView ? {
-            opacity: 1,
-            x: 0
-          } : {}} transition={{
-            duration: 0.8,
-            delay: 0.4
-          }}>
+          opacity: 0,
+          x: 50
+        }} animate={isInView ? {
+          opacity: 1,
+          x: 0
+        } : {}} transition={{
+          duration: 0.8,
+          delay: 0.4
+        }}>
             <div className="relative h-full">
               <div className="absolute -top-4 -right-4 w-full h-full bg-primary/10 rounded-2xl" />
               <div className="relative bg-card rounded-2xl p-8 shadow-lg border border-border h-full">
@@ -122,15 +120,15 @@ const AboutSection = () => {
 
         {/* About Content */}
         <motion.div initial={{
-          opacity: 0,
-          y: 40
-        }} animate={isInView ? {
-          opacity: 1,
-          y: 0
-        } : {}} transition={{
-          duration: 0.8,
-          delay: 0.5
-        }} className="max-w-4xl mx-auto text-center mb-20">
+        opacity: 0,
+        y: 40
+      }} animate={isInView ? {
+        opacity: 1,
+        y: 0
+      } : {}} transition={{
+        duration: 0.8,
+        delay: 0.5
+      }} className="max-w-4xl mx-auto text-center mb-20">
           <p className="text-lg text-muted-foreground mb-6">
             At APRA, we believe that knowledge is the most powerful tool for transformation. 
             Our carefully curated publications cover a wide spectrum of subjects, designed 
