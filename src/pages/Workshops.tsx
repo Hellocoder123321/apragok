@@ -1,73 +1,10 @@
 import { motion } from "framer-motion";
-import { Calendar, Clock, Users, MapPin, BookOpen, Award, Target, Lightbulb } from "lucide-react";
+import { Users, BookOpen, Award, Target, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
-const workshops = [
-  {
-    id: 1,
-    title: "Leadership Excellence Program",
-    description: "Develop essential leadership skills to inspire teams and drive organizational success.",
-    duration: "3 Days",
-    participants: "20-30",
-    mode: "In-Person",
-    category: "Leadership",
-    upcoming: "Jan 15, 2025",
-  },
-  {
-    id: 2,
-    title: "Effective Communication Mastery",
-    description: "Master the art of persuasive communication in professional and personal settings.",
-    duration: "2 Days",
-    participants: "15-25",
-    mode: "Hybrid",
-    category: "Communication",
-    upcoming: "Jan 22, 2025",
-  },
-  {
-    id: 3,
-    title: "Strategic Thinking Workshop",
-    description: "Learn frameworks for strategic analysis and decision-making in complex environments.",
-    duration: "1 Day",
-    participants: "15-20",
-    mode: "Online",
-    category: "Strategy",
-    upcoming: "Feb 5, 2025",
-  },
-  {
-    id: 4,
-    title: "Team Building & Collaboration",
-    description: "Foster collaboration and build high-performing teams through experiential learning.",
-    duration: "2 Days",
-    participants: "25-40",
-    mode: "In-Person",
-    category: "Team Building",
-    upcoming: "Feb 12, 2025",
-  },
-  {
-    id: 5,
-    title: "Personal Development Bootcamp",
-    description: "Transform your mindset and unlock your full potential with proven techniques.",
-    duration: "5 Days",
-    participants: "10-15",
-    mode: "In-Person",
-    category: "Personal Growth",
-    upcoming: "Mar 1, 2025",
-  },
-  {
-    id: 6,
-    title: "Public Speaking Masterclass",
-    description: "Overcome stage fear and deliver impactful presentations with confidence.",
-    duration: "2 Days",
-    participants: "12-18",
-    mode: "Hybrid",
-    category: "Communication",
-    upcoming: "Mar 15, 2025",
-  },
-];
 
 const features = [
   {
@@ -126,10 +63,11 @@ const Workshops = () => {
             <Button 
               size="lg" 
               className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8"
-              onClick={() => document.getElementById('workshops-list')?.scrollIntoView({ behavior: 'smooth' })}
+              asChild
             >
-              <Calendar className="mr-2" size={20} />
-              View Upcoming Workshops
+              <a href="/#contact">
+                Get in Touch
+              </a>
             </Button>
           </motion.div>
         </div>
@@ -171,77 +109,6 @@ const Workshops = () => {
                   </CardHeader>
                   <CardContent>
                     <CardDescription>{feature.description}</CardDescription>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Workshops List */}
-      <section id="workshops-list" className="py-20">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
-              Upcoming Workshops & Training Sessions
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore our diverse range of workshops designed to enhance your skills and knowledge.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {workshops.map((workshop, index) => (
-              <motion.div
-                key={workshop.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Card className="h-full hover:shadow-lg transition-shadow border-border/50 hover:border-primary/30">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-2">
-                      <Badge variant="outline" className="text-xs">
-                        {workshop.category}
-                      </Badge>
-                      <Badge variant="secondary" className="text-xs">
-                        {workshop.mode}
-                      </Badge>
-                    </div>
-                    <CardTitle className="text-xl font-serif">{workshop.title}</CardTitle>
-                    <CardDescription className="line-clamp-2">
-                      {workshop.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="grid grid-cols-2 gap-3 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-2">
-                        <Clock size={16} className="text-primary" />
-                        <span>{workshop.duration}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Users size={16} className="text-primary" />
-                        <span>{workshop.participants}</span>
-                      </div>
-                      <div className="flex items-center gap-2 col-span-2">
-                        <Calendar size={16} className="text-primary" />
-                        <span>{workshop.upcoming}</span>
-                      </div>
-                    </div>
-                    <Button 
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                      onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                    >
-                      Register Interest
-                    </Button>
                   </CardContent>
                 </Card>
               </motion.div>
