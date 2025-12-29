@@ -57,7 +57,7 @@ const Publications = () => {
       {/* Books Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {books.map((book, index) => (
               <motion.div
                 key={book.id}
@@ -67,9 +67,9 @@ const Publications = () => {
                 whileHover={{ y: -8 }}
                 className="group"
               >
-                <div className="bg-card rounded-2xl overflow-hidden shadow-lg border border-border/50 hover:shadow-2xl transition-all duration-300">
+                <div className="bg-card rounded-2xl overflow-hidden shadow-lg border border-border/50 hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
                   {/* Book Cover */}
-                  <div className="relative aspect-[3/4] overflow-hidden">
+                  <div className="relative aspect-[2/3] overflow-hidden">
                     <img
                       src={book.cover}
                       alt={book.title}
@@ -84,13 +84,13 @@ const Publications = () => {
                   </div>
                   
                   {/* Book Info */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-serif font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  <div className="p-5 flex-1 flex flex-col">
+                    <h3 className="text-lg font-serif font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
                       {book.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm flex items-center gap-2">
-                      <BookOpen size={14} />
-                      {book.author}
+                    <p className="text-muted-foreground text-sm flex items-center gap-2 mt-auto">
+                      <BookOpen size={14} className="shrink-0" />
+                      <span className="line-clamp-1">{book.author}</span>
                     </p>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ const Publications = () => {
             >
               <div className="bg-card rounded-2xl overflow-hidden shadow-lg border border-dashed border-border hover:shadow-xl transition-all duration-300 h-full flex flex-col">
                 {/* Placeholder Cover */}
-                <div className="relative aspect-[3/4] overflow-hidden bg-secondary/50 flex items-center justify-center">
+                <div className="relative aspect-[2/3] overflow-hidden bg-secondary/50 flex items-center justify-center">
                   <div className="text-center p-6">
                     <Clock className="w-12 h-12 text-muted-foreground/50 mx-auto mb-4" />
                     <p className="text-muted-foreground font-medium">Coming Soon</p>
@@ -114,8 +114,8 @@ const Publications = () => {
                 </div>
                 
                 {/* Card Info */}
-                <div className="p-6 flex-1 flex flex-col justify-center">
-                  <h3 className="text-xl font-serif font-semibold text-muted-foreground mb-2">
+                <div className="p-5 flex-1 flex flex-col justify-center">
+                  <h3 className="text-lg font-serif font-semibold text-muted-foreground mb-2">
                     More Books Coming Soon
                   </h3>
                   <p className="text-muted-foreground/70 text-sm">
