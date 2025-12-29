@@ -117,7 +117,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-white/50 text-white hover:bg-white hover:text-foreground text-base font-medium px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-white text-base font-medium px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm"
                 onClick={() => navigate('/workshops')}
               >
                 <Users className="mr-2" size={20} />
