@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Users, BookOpen, Award, Target, Lightbulb } from "lucide-react";
+import { Users, BookOpen, Award, Target, Lightbulb, Images } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -114,6 +114,36 @@ const Workshops = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Gallery CTA Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <Images className="mx-auto text-primary mb-6" size={48} />
+            <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
+              See Our Workshops in Action
+            </h2>
+            <p className="text-muted-foreground mb-8">
+              Browse through photos from our past workshops and training sessions to get a glimpse of the transformative experiences we create.
+            </p>
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8"
+              asChild
+            >
+              <a href="/gallery">
+                View Gallery
+              </a>
+            </Button>
+          </motion.div>
         </div>
       </section>
 
