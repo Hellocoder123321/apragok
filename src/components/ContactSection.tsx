@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, Facebook, Instagram, MessageCircle } from "lucide-react";
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -19,6 +19,27 @@ const ContactSection = () => {
       title: "Call Us",
       content: "+91 8766251527",
       subtitle: "Mon-Fri, 10:00AM - 5:00 PM",
+    },
+  ];
+
+  const socialLinks = [
+    {
+      icon: Facebook,
+      title: "Facebook",
+      href: "https://www.facebook.com/share/17bUBhU3y9/",
+      color: "bg-blue-500/10 text-blue-600 hover:bg-blue-500 hover:text-white",
+    },
+    {
+      icon: Instagram,
+      title: "Instagram",
+      href: "https://www.instagram.com/apra_groupofknowledge/",
+      color: "bg-pink-500/10 text-pink-600 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:text-white",
+    },
+    {
+      icon: MessageCircle,
+      title: "WhatsApp",
+      href: "https://wa.me/message/PQ6G2FPVROSKH1",
+      color: "bg-green-500/10 text-green-600 hover:bg-green-500 hover:text-white",
     },
   ];
 
@@ -74,6 +95,33 @@ const ContactSection = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* Social Media Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="mt-10 text-center"
+          >
+            <p className="text-sm text-muted-foreground mb-4">Connect with us on social media</p>
+            <div className="flex justify-center gap-4">
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={social.title}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
+                  className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${social.color}`}
+                  title={social.title}
+                >
+                  <social.icon size={22} />
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
