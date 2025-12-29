@@ -65,7 +65,7 @@ const Workshops = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8"
               asChild
             >
-              <a href="/#contact">
+              <a href="https://chat.whatsapp.com/BPo102iGqdgE3KBVR1rm05" target="_blank" rel="noopener noreferrer">
                 Get in Touch
               </a>
             </Button>
