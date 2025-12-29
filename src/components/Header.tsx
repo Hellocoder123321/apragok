@@ -2,17 +2,28 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate, useLocation } from "react-router-dom";
 import apraLogo from "@/assets/apra-logo.jpeg";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", section: "home" },
+  { name: "About", section: "about" },
+  { name: "Services", section: "services" },
+  { name: "Contact", section: "contact" },
 ];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (section: string) => {
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: section } });
+    } else {
+      document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <motion.header
@@ -24,8 +35,8 @@ const Header = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <motion.a
-            href="#home"
+          <motion.button
+            onClick={() => handleNavClick("home")}
             className="flex items-center gap-3"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 400 }}
@@ -35,18 +46,18 @@ const Header = () => {
               alt="APRA Logo"
               className="h-12 w-12 rounded-full object-cover shadow-md"
             />
-            <div className="hidden sm:block">
+            <div className="hidden sm:block text-left">
               <h1 className="text-xl font-serif font-bold text-foreground">APRA</h1>
               <p className="text-xs text-muted-foreground tracking-wider">Group of Knowledge</p>
             </div>
-          </motion.a>
+          </motion.button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link, index) => (
-              <motion.a
+              <motion.button
                 key={link.name}
-                href={link.href}
+                onClick={() => handleNavClick(link.section)}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 + 0.3 }}
@@ -54,7 +65,7 @@ const Header = () => {
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-              </motion.a>
+              </motion.button>
             ))}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -63,7 +74,7 @@ const Header = () => {
             >
               <Button 
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => handleNavClick("contact")}
               >
                 Get in Touch
               </Button>
@@ -92,20 +103,22 @@ const Header = () => {
           >
             <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-foreground hover:text-primary transition-colors py-2"
+                  onClick={() => {
+                    setIsOpen(false);
+                    handleNavClick(link.section);
+                  }}
+                  className="text-foreground hover:text-primary transition-colors py-2 text-left"
                 >
                   {link.name}
-                </a>
+                </button>
               ))}
               <Button 
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
                 onClick={() => {
                   setIsOpen(false);
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  handleNavClick("contact");
                 }}
               >
                 Get in Touch
