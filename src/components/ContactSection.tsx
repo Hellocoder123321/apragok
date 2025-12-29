@@ -32,7 +32,7 @@ const ContactSection = () => {
     {
       icon: Instagram,
       title: "Instagram",
-      href: "https://www.instagram.com/apra_groupofknowledge/",
+      href: "https://www.instagram.com/apra.gok?igsh=M2I1OWFocnduZ3V4",
       color: "bg-pink-500/10 text-pink-600 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:text-white",
     },
     {
