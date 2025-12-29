@@ -129,11 +129,11 @@ const Workshops = () => {
           >
             <BookOpen className="mx-auto text-primary mb-6" size={48} />
             <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
-              Collaboration Request
+              Collaborate With Us
             </h2>
             <p className="text-muted-foreground mb-8">
-              Looking for tailored training programs for your organization? We design custom 
-              workshops that align with your specific goals and challenges.
+              Want to conduct a workshop or training program in partnership with us? We welcome 
+              collaborations with individuals and organizations to create impactful learning experiences together.
             </p>
             <Button 
               size="lg" 
@@ -142,7 +142,7 @@ const Workshops = () => {
               asChild
             >
               <a href="/#contact">
-                Contact Us for Custom Programs
+                Propose a Collaboration
               </a>
             </Button>
           </motion.div>
