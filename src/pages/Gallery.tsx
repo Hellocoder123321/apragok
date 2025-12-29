@@ -1,45 +1,38 @@
 import { motion } from "framer-motion";
-import { Camera, Images } from "lucide-react";
+import { Images } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+import workshop1 from "@/assets/gallery/workshop-1.jpeg";
+import workshop2 from "@/assets/gallery/workshop-2.jpeg";
+import workshop3 from "@/assets/gallery/workshop-3.jpeg";
+import workshop4 from "@/assets/gallery/workshop-4.jpeg";
+
 const galleryImages = [
   {
     id: 1,
-    title: "Workshop Session 2024",
-    description: "Interactive training session with participants",
-    placeholder: true,
+    title: "Certificate Distribution Ceremony",
+    description: "Recognizing achievements of our participants",
+    image: workshop1,
   },
   {
     id: 2,
-    title: "Leadership Seminar",
-    description: "Expert-led leadership development program",
-    placeholder: true,
+    title: "Book Launch Event",
+    description: "Celebrating new publications with distinguished guests",
+    image: workshop2,
   },
   {
     id: 3,
-    title: "Team Building Activity",
-    description: "Collaborative exercises for team synergy",
-    placeholder: true,
+    title: "Workshop Training Session",
+    description: "Interactive learning with educators and professionals",
+    image: workshop3,
   },
   {
     id: 4,
-    title: "Certificate Distribution",
-    description: "Recognizing achievements of our participants",
-    placeholder: true,
-  },
-  {
-    id: 5,
-    title: "Guest Lecture Series",
-    description: "Industry experts sharing their insights",
-    placeholder: true,
-  },
-  {
-    id: 6,
-    title: "Networking Event",
-    description: "Building connections that last",
-    placeholder: true,
+    title: "Professional Development Program",
+    description: "Empowering participants with new skills and knowledge",
+    image: workshop4,
   },
 ];
 
@@ -91,10 +84,12 @@ const Gallery = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative overflow-hidden rounded-xl bg-secondary/30 aspect-[4/3] cursor-pointer"
               >
-                {/* Placeholder for images */}
-                <div className="absolute inset-0 flex items-center justify-center bg-primary/5">
-                  <Camera className="text-primary/30" size={48} />
-                </div>
+                {/* Gallery Image */}
+                <img 
+                  src={image.image} 
+                  alt={image.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
                 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
