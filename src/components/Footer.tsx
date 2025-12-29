@@ -131,7 +131,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MessageCircle size={18} className="opacity-70 mt-0.5" />
                 <a 
-                  href="https://wa.me/918766251527" 
+                  href="https://wa.me/message/PQ6G2FPVROSKH1" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-sm opacity-80 hover:opacity-100 transition-opacity"
