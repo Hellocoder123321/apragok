@@ -129,7 +129,7 @@ const Workshops = () => {
           >
             <BookOpen className="mx-auto text-primary mb-6" size={48} />
             <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
-              Custom Training Solutions
+              Collaboration Request
             </h2>
             <p className="text-muted-foreground mb-8">
               Looking for tailored training programs for your organization? We design custom 
