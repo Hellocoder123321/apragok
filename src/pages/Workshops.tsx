@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
-import { Users, BookOpen, Award, Target, Lightbulb, Images } from "lucide-react";
+import { Users, BookOpen, Award, Target, Lightbulb, Images, Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import conferenceFlyer1 from "@/assets/events/conference-flyer-1.jpeg";
+import conferenceFlyer2 from "@/assets/events/conference-flyer-2.jpeg";
 
 const features = [
   {
@@ -67,6 +69,87 @@ const Workshops = () => {
             >
               <a href="https://chat.whatsapp.com/BPo102iGqdgE3KBVR1rm05" target="_blank" rel="noopener noreferrer">
                 Get in Touch
+              </a>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Upcoming Events Section */}
+      <section className="py-16 bg-primary/5">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <Badge variant="secondary" className="mb-4">
+              <Calendar size={14} className="mr-1" />
+              Upcoming Event
+            </Badge>
+            <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
+              Two-Day Future-Forward Research Conference
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-2">
+              Global Trends and Interdisciplinary Innovation
+            </p>
+            <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
+              <span className="flex items-center gap-1">
+                <Calendar size={16} className="text-primary" />
+                January 16-17, 2026
+              </span>
+              <span className="flex items-center gap-1">
+                <MapPin size={16} className="text-primary" />
+                Google Meet Platform
+              </span>
+            </div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-xl overflow-hidden shadow-lg"
+            >
+              <img 
+                src={conferenceFlyer1} 
+                alt="Conference flyer - Call for papers and important dates" 
+                className="w-full h-auto"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="rounded-xl overflow-hidden shadow-lg"
+            >
+              <img 
+                src={conferenceFlyer2} 
+                alt="Conference flyer - Submission guidelines and sub-themes" 
+                className="w-full h-auto"
+              />
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-center"
+          >
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 py-6 text-lg"
+              asChild
+            >
+              <a href="https://forms.gle/QkiKbeR34iD3hJ8a7" target="_blank" rel="noopener noreferrer">
+                Register Now
               </a>
             </Button>
           </motion.div>
