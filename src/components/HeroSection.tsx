@@ -41,7 +41,7 @@ const HeroSection = () => {
           </motion.div>
         </AnimatePresence>
         {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-background/80" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
