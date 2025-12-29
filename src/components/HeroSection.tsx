@@ -7,8 +7,17 @@ import apraLogo from "@/assets/apra-logo.jpeg";
 import workshop1 from "@/assets/gallery/workshop-1.jpeg";
 import workshop2 from "@/assets/gallery/workshop-2.jpeg";
 import workshop3 from "@/assets/gallery/workshop-3.jpeg";
+import workshop4 from "@/assets/gallery/workshop-4.jpeg";
+import workshop5 from "@/assets/gallery/workshop-5.jpeg";
+import workshop6 from "@/assets/gallery/workshop-6.jpeg";
+import workshop7 from "@/assets/gallery/workshop-7.jpeg";
+import workshop8 from "@/assets/gallery/workshop-8.jpeg";
+import workshop9 from "@/assets/gallery/workshop-9.jpeg";
+import workshop10 from "@/assets/gallery/workshop-10.jpeg";
+import workshop11 from "@/assets/gallery/workshop-11.jpeg";
+import workshop12 from "@/assets/gallery/workshop-12.jpeg";
 
-const slideshowImages = [workshop1, workshop2, workshop3];
+const slideshowImages = [workshop1, workshop2, workshop3, workshop4, workshop5, workshop6, workshop7, workshop8, workshop9, workshop10, workshop11, workshop12];
 
 const HeroSection = () => {
   const navigate = useNavigate();
