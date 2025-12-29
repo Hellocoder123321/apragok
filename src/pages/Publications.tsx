@@ -4,45 +4,61 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import emergingTrendsEducation from "@/assets/books/emerging-trends-education.jpeg";
+import dincharyaSanatanDharma from "@/assets/books/dincharya-sanatan-dharma.jpeg";
 
 const books = [
   {
     id: 1,
+    title: "Emerging Trends and Issues in Education",
+    author: "Dr. Priyanka Verma & Dr. Sonam Sharma",
+    cover: emergingTrendsEducation,
+    category: "Education"
+  },
+  {
+    id: 2,
+    title: "Dincharya Sanatan Dharma",
+    author: "APRA Group of Knowledge",
+    cover: dincharyaSanatanDharma,
+    category: "Spirituality"
+  },
+  {
+    id: 3,
     title: "Educational Excellence",
     author: "Dr. Priyanka Verma",
     cover: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&h=400&fit=crop",
     category: "Education"
   },
   {
-    id: 2,
+    id: 4,
     title: "Leadership in Learning",
     author: "Dr. Priyanka Verma",
     cover: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300&h=400&fit=crop",
     category: "Leadership"
   },
   {
-    id: 3,
+    id: 5,
     title: "Innovative Teaching Methods",
     author: "Dr. Priyanka Verma",
     cover: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=300&h=400&fit=crop",
     category: "Pedagogy"
   },
   {
-    id: 4,
+    id: 6,
     title: "Empowering Educators",
     author: "Dr. Priyanka Verma",
     cover: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=400&fit=crop",
     category: "Professional Development"
   },
   {
-    id: 5,
+    id: 7,
     title: "Future of Education",
     author: "Dr. Priyanka Verma",
     cover: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=300&h=400&fit=crop",
     category: "Vision"
   },
   {
-    id: 6,
+    id: 8,
     title: "Knowledge & Growth",
     author: "Dr. Priyanka Verma",
     cover: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop",
