@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import workshop1 from "@/assets/gallery/workshop-1.jpeg";
 import workshop2 from "@/assets/gallery/workshop-2.jpeg";
 import workshop3 from "@/assets/gallery/workshop-3.jpeg";
-import workshop4 from "@/assets/gallery/workshop-4.jpeg";
 
 const galleryImages = [
   {
@@ -27,12 +26,6 @@ const galleryImages = [
     title: "Workshop Training Session",
     description: "Interactive learning with educators and professionals",
     image: workshop3,
-  },
-  {
-    id: 4,
-    title: "Professional Development Program",
-    description: "Empowering participants with new skills and knowledge",
-    image: workshop4,
   },
 ];
 
