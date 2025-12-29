@@ -7,6 +7,15 @@ import Footer from "@/components/Footer";
 import workshop1 from "@/assets/gallery/workshop-1.jpeg";
 import workshop2 from "@/assets/gallery/workshop-2.jpeg";
 import workshop3 from "@/assets/gallery/workshop-3.jpeg";
+import workshop16 from "@/assets/gallery/workshop-16.jpeg";
+import workshop17 from "@/assets/gallery/workshop-17.jpeg";
+import workshop18 from "@/assets/gallery/workshop-18.jpeg";
+import workshop19 from "@/assets/gallery/workshop-19.jpeg";
+import workshop20 from "@/assets/gallery/workshop-20.jpeg";
+import workshop21 from "@/assets/gallery/workshop-21.jpeg";
+import workshop22 from "@/assets/gallery/workshop-22.jpeg";
+import workshop23 from "@/assets/gallery/workshop-23.jpeg";
+import workshop24 from "@/assets/gallery/workshop-24.jpeg";
 
 const galleryImages = [
   {
@@ -26,6 +35,60 @@ const galleryImages = [
     title: "Workshop Training Session",
     description: "Interactive learning with educators and professionals",
     image: workshop3,
+  },
+  {
+    id: 16,
+    title: "Faculty Development Workshop",
+    description: "Training session with educators at library",
+    image: workshop16,
+  },
+  {
+    id: 17,
+    title: "Interactive Teaching Session",
+    description: "Engaging participants in active learning",
+    image: workshop17,
+  },
+  {
+    id: 18,
+    title: "NEP 2020 Presentation",
+    description: "Discussing National Education Policy implementation",
+    image: workshop18,
+  },
+  {
+    id: 19,
+    title: "School Workshop Session",
+    description: "Interactive session with students and teachers",
+    image: workshop19,
+  },
+  {
+    id: 20,
+    title: "Award Ceremony",
+    description: "Recognizing excellence in education",
+    image: workshop20,
+  },
+  {
+    id: 21,
+    title: "School Assembly Address",
+    description: "Inspiring students during morning assembly",
+    image: workshop21,
+  },
+  {
+    id: 22,
+    title: "Primary School Event",
+    description: "Engaging young minds in educational activities",
+    image: workshop22,
+  },
+  {
+    id: 23,
+    title: "Faculty Meeting",
+    description: "Collaborative discussion with educators",
+    image: workshop23,
+  },
+  {
+    id: 24,
+    title: "Training Conference",
+    description: "Professional development session for teachers",
+    image: workshop24,
   },
 ];
 
