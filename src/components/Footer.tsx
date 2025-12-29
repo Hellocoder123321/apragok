@@ -120,7 +120,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Facebook size={18} className="opacity-70 mt-0.5" />
                 <a 
-                  href="https://www.facebook.com/profile.php?id=61572955498498" 
+                  href="https://www.facebook.com/share/17bUBhU3y9/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-sm opacity-80 hover:opacity-100 transition-opacity"
