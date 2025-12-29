@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, BookOpen, User, Tag } from "lucide-react";
+import { ArrowLeft, BookOpen, User, Tag, FileText } from "lucide-react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -21,7 +21,8 @@ const booksData = [
       "Educational technology integration",
       "Contemporary challenges in education",
       "Innovative learning approaches"
-    ]
+    ],
+    pdfUrl: "/books/emerging-trends-education.pdf"
   },
   {
     id: 2,
@@ -36,7 +37,8 @@ const booksData = [
       "Traditional wisdom and rituals",
       "Holistic well-being approaches",
       "Ancient knowledge for modern life"
-    ]
+    ],
+    pdfUrl: null
   }
 ];
 
@@ -146,6 +148,32 @@ const BookDetail = () => {
               </div>
             </motion.div>
           </div>
+
+          {/* PDF Viewer Section */}
+          {book.pdfUrl && (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="mt-16 max-w-6xl mx-auto"
+            >
+              <div className="bg-card rounded-2xl border border-border/50 overflow-hidden shadow-lg">
+                <div className="p-6 border-b border-border/50 flex items-center gap-3">
+                  <FileText className="text-primary" size={24} />
+                  <h2 className="text-xl font-serif font-semibold text-foreground">
+                    Read the Book
+                  </h2>
+                </div>
+                <div className="aspect-[4/5] md:aspect-[16/10]">
+                  <iframe
+                    src={book.pdfUrl}
+                    className="w-full h-full"
+                    title={`${book.title} PDF`}
+                  />
+                </div>
+              </div>
+            </motion.div>
+          )}
         </div>
       </section>
 
