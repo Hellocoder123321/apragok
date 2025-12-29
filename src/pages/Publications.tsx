@@ -10,6 +10,7 @@ import dincharyaSanatanDharma from "@/assets/books/dincharya-sanatan-dharma.jpeg
 const books = [
   {
     id: 1,
+    slug: "emerging-trends-education",
     title: "Emerging Trends and Issues in Education",
     author: "Dr. Priyanka Verma & Dr. Sonam Sharma",
     cover: emergingTrendsEducation,
@@ -17,6 +18,7 @@ const books = [
   },
   {
     id: 2,
+    slug: "dincharya-sanatan-dharma",
     title: "Dincharya Sanatan Dharma",
     author: "APRA Group of Knowledge",
     cover: dincharyaSanatanDharma,
@@ -67,33 +69,35 @@ const Publications = () => {
                 whileHover={{ y: -8 }}
                 className="group"
               >
-                <div className="bg-card rounded-2xl overflow-hidden shadow-lg border border-border/50 hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
-                  {/* Book Cover */}
-                  <div className="relative aspect-[2/3] overflow-hidden">
-                    <img
-                      src={book.cover}
-                      alt={book.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-primary/90 text-primary-foreground text-xs font-medium rounded-full">
-                        {book.category}
-                      </span>
+                <Link to={`/publications/${book.slug}`} className="block h-full">
+                  <div className="bg-card rounded-2xl overflow-hidden shadow-lg border border-border/50 hover:shadow-2xl transition-all duration-300 h-full flex flex-col cursor-pointer">
+                    {/* Book Cover */}
+                    <div className="relative aspect-[2/3] overflow-hidden">
+                      <img
+                        src={book.cover}
+                        alt={book.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute top-4 left-4">
+                        <span className="px-3 py-1 bg-primary/90 text-primary-foreground text-xs font-medium rounded-full">
+                          {book.category}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    {/* Book Info */}
+                    <div className="p-5 flex-1 flex flex-col">
+                      <h3 className="text-lg font-serif font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                        {book.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm flex items-center gap-2 mt-auto">
+                        <BookOpen size={14} className="shrink-0" />
+                        <span className="line-clamp-1">{book.author}</span>
+                      </p>
                     </div>
                   </div>
-                  
-                  {/* Book Info */}
-                  <div className="p-5 flex-1 flex flex-col">
-                    <h3 className="text-lg font-serif font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                      {book.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm flex items-center gap-2 mt-auto">
-                      <BookOpen size={14} className="shrink-0" />
-                      <span className="line-clamp-1">{book.author}</span>
-                    </p>
-                  </div>
-                </div>
+                </Link>
               </motion.div>
             ))}
             

@@ -1,0 +1,157 @@
+import { motion } from "framer-motion";
+import { ArrowLeft, BookOpen, User, Tag } from "lucide-react";
+import { Link, useParams, Navigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import emergingTrendsEducation from "@/assets/books/emerging-trends-education.jpeg";
+import dincharyaSanatanDharma from "@/assets/books/dincharya-sanatan-dharma.jpeg";
+
+const booksData = [
+  {
+    id: 1,
+    slug: "emerging-trends-education",
+    title: "Emerging Trends and Issues in Education",
+    author: "Dr. Priyanka Verma & Dr. Sonam Sharma",
+    cover: emergingTrendsEducation,
+    category: "Education",
+    description: "This comprehensive book explores the latest developments and challenges in the field of education. It provides valuable insights into modern teaching methodologies, educational technology integration, and the evolving landscape of learning environments.",
+    highlights: [
+      "Modern teaching methodologies",
+      "Educational technology integration",
+      "Contemporary challenges in education",
+      "Innovative learning approaches"
+    ]
+  },
+  {
+    id: 2,
+    slug: "dincharya-sanatan-dharma",
+    title: "Dincharya Sanatan Dharma",
+    author: "APRA Group of Knowledge",
+    cover: dincharyaSanatanDharma,
+    category: "Spirituality",
+    description: "A profound exploration of daily spiritual practices rooted in Sanatan Dharma traditions. This book guides readers through the significance of daily routines and rituals that promote physical, mental, and spiritual well-being.",
+    highlights: [
+      "Daily spiritual practices",
+      "Traditional wisdom and rituals",
+      "Holistic well-being approaches",
+      "Ancient knowledge for modern life"
+    ]
+  }
+];
+
+const BookDetail = () => {
+  const { slug } = useParams();
+  const book = booksData.find(b => b.slug === slug);
+
+  if (!book) {
+    return <Navigate to="/publications" replace />;
+  }
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 bg-gradient-to-b from-secondary/50 to-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Link to="/publications">
+              <Button variant="ghost" className="mb-6 text-muted-foreground hover:text-foreground">
+                <ArrowLeft className="mr-2" size={18} />
+                Back to Publications
+              </Button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Book Content */}
+      <section className="py-8 pb-20">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+            {/* Book Cover */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex justify-center"
+            >
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-primary/10 rounded-3xl blur-2xl group-hover:bg-primary/20 transition-all duration-500" />
+                <img
+                  src={book.cover}
+                  alt={book.title}
+                  className="relative w-full max-w-sm rounded-2xl shadow-2xl"
+                />
+              </div>
+            </motion.div>
+
+            {/* Book Details */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="space-y-6"
+            >
+              <div>
+                <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
+                  <Tag size={14} />
+                  {book.category}
+                </span>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4">
+                  {book.title}
+                </h1>
+                <p className="text-lg text-muted-foreground flex items-center gap-2">
+                  <User size={18} />
+                  {book.author}
+                </p>
+              </div>
+
+              <div className="prose prose-lg text-muted-foreground">
+                <p>{book.description}</p>
+              </div>
+
+              {/* Key Highlights */}
+              <div className="bg-secondary/30 rounded-2xl p-6">
+                <h3 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+                  <BookOpen size={20} className="text-primary" />
+                  Key Highlights
+                </h3>
+                <ul className="space-y-3">
+                  {book.highlights.map((highlight, index) => (
+                    <li key={index} className="flex items-start gap-3 text-muted-foreground">
+                      <span className="w-2 h-2 bg-primary rounded-full mt-2 shrink-0" />
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* CTA */}
+              <div className="pt-4">
+                <a 
+                  href="https://wa.me/message/PQ6G2FPVROSKH1" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8">
+                    Inquire About This Book
+                  </Button>
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default BookDetail;
