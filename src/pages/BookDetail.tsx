@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, BookOpen, User, Tag, FileText } from "lucide-react";
+import { ArrowLeft, BookOpen, User, Tag, FileText, ShoppingCart } from "lucide-react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -135,13 +135,25 @@ const BookDetail = () => {
               </div>
 
               {/* CTA */}
-              <div className="pt-4">
+              <div className="pt-4 flex flex-col sm:flex-row gap-4">
+                <a 
+                  href={`https://wa.me/message/PQ6G2FPVROSKH1?text=${encodeURIComponent(`Hi, I would like to purchase "${book.title}" by ${book.author}. Please share the payment and delivery details.`)}`}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                >
+                  <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white rounded-full px-8">
+                    <ShoppingCart className="mr-2" size={18} />
+                    Buy via WhatsApp
+                  </Button>
+                </a>
                 <a 
                   href="https://wa.me/message/PQ6G2FPVROSKH1" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  className="flex-1"
                 >
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8">
+                  <Button size="lg" variant="outline" className="w-full rounded-full px-8">
                     Inquire About This Book
                   </Button>
                 </a>
