@@ -38,7 +38,7 @@ const booksData = [
       "Holistic well-being approaches",
       "Ancient knowledge for modern life"
     ],
-    pdfUrl: null
+    pdfUrl: "/books/dincharya-sanatan-dharma.pdf"
   }
 ];
 
