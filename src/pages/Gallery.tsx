@@ -81,7 +81,7 @@ const galleryImages = [
   {
     id: 23,
     title: "Faculty Development Program (FDP)",
-    description: "Collaborative discussion with educators",
+    description: "Teaching Models",
     image: workshop23,
   },
   {
