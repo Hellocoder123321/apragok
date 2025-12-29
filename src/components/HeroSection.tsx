@@ -18,7 +18,8 @@ import workshop11 from "@/assets/gallery/workshop-11.jpeg";
 import workshop12 from "@/assets/gallery/workshop-12.jpeg";
 import workshop13 from "@/assets/gallery/workshop-13.jpeg";
 
-const slideshowImages = [workshop1, workshop2, workshop3, workshop4, workshop5, workshop6, workshop7, workshop8, workshop9, workshop10, workshop11, workshop12, workshop13];
+const allImages = [workshop1, workshop2, workshop3, workshop4, workshop5, workshop6, workshop7, workshop8, workshop9, workshop10, workshop11, workshop12, workshop13];
+const slideshowImages = [...allImages].sort(() => Math.random() - 0.5);
 
 const HeroSection = () => {
   const navigate = useNavigate();
