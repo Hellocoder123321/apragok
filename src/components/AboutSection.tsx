@@ -118,42 +118,63 @@ const AboutSection = () => {
             Our Leadership Team
           </motion.h3>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {leaders.map((leader, index) => (
+          {/* Founder Card - Featured */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="group max-w-2xl mx-auto mb-8"
+          >
+            <div className="relative h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/10 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300" />
+              <div className="relative bg-card rounded-2xl p-8 shadow-xl border-2 border-primary/20 h-full hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                    <Crown className="text-primary-foreground" size={32} />
+                  </div>
+                  <div className="text-center sm:text-left">
+                    <span className="text-sm font-medium text-primary uppercase tracking-wider">
+                      {leaders[0].role}
+                    </span>
+                    <h4 className="text-2xl font-serif font-bold text-foreground mt-1 mb-3">
+                      {leaders[0].name}
+                    </h4>
+                    <p className="text-muted-foreground mb-3 leading-relaxed">
+                      {leaders[0].description}
+                    </p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {leaders[0].detail}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Other Team Members - Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {leaders.slice(1).map((leader, index) => (
               <motion.div
                 key={leader.name}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.2 + index * 0.15 }}
+                transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
                 className="group"
               >
                 <div className="relative h-full">
-                  {/* Decorative background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300" />
-                  
-                  {/* Card */}
-                  <div className="relative bg-card rounded-2xl p-8 shadow-lg border border-border h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                    {/* Icon Badge */}
-                    <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform duration-300">
-                      <leader.icon className="text-primary-foreground" size={28} />
+                  <div className="relative bg-card rounded-2xl p-6 shadow-lg border border-border h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform duration-300">
+                      <leader.icon className="text-primary-foreground" size={24} />
                     </div>
-                    
-                    {/* Role */}
-                    <span className="text-sm font-medium text-primary uppercase tracking-wider">
+                    <span className="text-xs font-medium text-primary uppercase tracking-wider">
                       {leader.role}
                     </span>
-                    
-                    {/* Name */}
-                    <h4 className="text-xl font-serif font-bold text-foreground mt-2 mb-4">
+                    <h4 className="text-lg font-serif font-bold text-foreground mt-1 mb-2">
                       {leader.name}
                     </h4>
-                    
-                    {/* Description */}
-                    <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                      {leader.description}
-                    </p>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      {leader.detail}
+                      {leader.description}
                     </p>
                   </div>
                 </div>
