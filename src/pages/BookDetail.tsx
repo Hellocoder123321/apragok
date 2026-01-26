@@ -22,7 +22,8 @@ const booksData = [
       "Contemporary challenges in education",
       "Innovative learning approaches"
     ],
-    pdfUrl: "/books/emerging-trends-education.pdf"
+    pdfUrl: "/books/emerging-trends-education.pdf",
+    buyUrl: "https://forms.gle/Lz4rGNem7cHVzJDW8"
   },
   {
     id: 2,
@@ -38,7 +39,8 @@ const booksData = [
       "Holistic well-being approaches",
       "Ancient knowledge for modern life"
     ],
-    pdfUrl: "/books/dincharya-sanatan-dharma.pdf"
+    pdfUrl: "/books/dincharya-sanatan-dharma.pdf",
+    buyUrl: "https://wa.me/message/PQ6G2FPVROSKH1"
   }
 ];
 
@@ -137,7 +139,7 @@ const BookDetail = () => {
               {/* CTA */}
               <div className="pt-4 flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="https://forms.gle/Lz4rGNem7cHVzJDW8"
+                  href={book.buyUrl}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex-1"
