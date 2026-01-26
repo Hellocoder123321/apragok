@@ -55,7 +55,7 @@ const AboutSection = () => {
     },
     {
       icon: ClipboardCheck,
-      role: "Secretary / Administrative Officer",
+      role: "Administrative Officer",
       name: "Mr. Ajay",
       description: "Office Administration managing official documentation.",
       detail: "Handles corporate correspondence and general office management to ensure smooth administrative operations."
