@@ -80,7 +80,7 @@ const Workshops = () => {
         </div>
       </section>
 
-      {/* Upcoming Events Section */}
+      {/* Past Events Section */}
       <section className="py-16 bg-primary/5">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -90,9 +90,9 @@ const Workshops = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <Badge variant="secondary" className="mb-4">
+            <Badge variant="outline" className="mb-4 border-muted-foreground/50">
               <Calendar size={14} className="mr-1" />
-              Upcoming Event
+              Past Event
             </Badge>
             <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
               Two-Day Future-Forward Research Conference
@@ -153,9 +153,9 @@ const Workshops = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 py-6 text-lg"
               asChild
             >
-              <a href="https://forms.gle/QkiKbeR34iD3hJ8a7" target="_blank" rel="noopener noreferrer">
-                Register Now
-              </a>
+              <Link to="/gallery">
+                View Event Gallery
+              </Link>
             </Button>
           </motion.div>
         </div>
