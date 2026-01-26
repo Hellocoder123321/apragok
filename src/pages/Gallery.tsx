@@ -17,6 +17,7 @@ import workshop22 from "@/assets/gallery/workshop-22.jpeg";
 import workshop23 from "@/assets/gallery/workshop-23.jpeg";
 import workshop24 from "@/assets/gallery/workshop-24.jpeg";
 import conferenceDay1 from "@/assets/gallery/conference-day1.jpeg";
+import conferenceDay2 from "@/assets/gallery/conference-day2.jpeg";
 
 const galleryImages = [
   {
@@ -24,6 +25,12 @@ const galleryImages = [
     title: "Future Forward Research Conference - Day 1",
     description: "Two Day Conference on Global Trends and Interdisciplinary Education",
     image: conferenceDay1,
+  },
+  {
+    id: 26,
+    title: "Future Forward Research Conference - Day 2",
+    description: "Presentations on Cultural Heritage, AI in Education & more",
+    image: conferenceDay2,
   },
   {
     id: 1,
