@@ -144,7 +144,7 @@ const BookDetail = () => {
                 >
                   <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white rounded-full px-8">
                     <ShoppingCart className="mr-2" size={18} />
-                    Buy via WhatsApp
+                    Buy Now
                   </Button>
                 </a>
                 <a 
