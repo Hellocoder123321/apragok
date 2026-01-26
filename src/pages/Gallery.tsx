@@ -29,7 +29,7 @@ const galleryImages = [
   {
     id: 26,
     title: "Future Forward Research Conference - Day 2",
-    description: "Presentations on Cultural Heritage, AI in Education & more",
+    description: "Two Day Conference on Global Trends and Interdisciplinary Education",
     image: conferenceDay2,
   },
   {
