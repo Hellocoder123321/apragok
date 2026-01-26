@@ -23,7 +23,8 @@ const booksData = [
       "Innovative learning approaches"
     ],
     pdfUrl: "/books/emerging-trends-education.pdf",
-    buyUrl: "https://forms.gle/Lz4rGNem7cHVzJDW8"
+    buyUrl: "https://forms.gle/Lz4rGNem7cHVzJDW8",
+    buyLabel: "Buy Now"
   },
   {
     id: 2,
@@ -40,7 +41,8 @@ const booksData = [
       "Ancient knowledge for modern life"
     ],
     pdfUrl: "/books/dincharya-sanatan-dharma.pdf",
-    buyUrl: "https://wa.me/message/PQ6G2FPVROSKH1"
+    buyUrl: "https://wa.me/message/PQ6G2FPVROSKH1",
+    buyLabel: "Buy via WhatsApp"
   }
 ];
 
@@ -146,7 +148,7 @@ const BookDetail = () => {
                 >
                   <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8">
                     <ShoppingCart className="mr-2" size={18} />
-                    Buy Now
+                    {book.buyLabel}
                   </Button>
                 </a>
                 <a 
