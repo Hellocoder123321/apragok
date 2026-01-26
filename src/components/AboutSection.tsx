@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Award, Target, Heart, Lightbulb, User, Crown, Briefcase } from "lucide-react";
+import { Award, Target, Heart, Lightbulb, Crown, Briefcase, Scale, PenLine, GraduationCap, TrendingUp, ClipboardCheck } from "lucide-react";
 
 const AboutSection = () => {
   const ref = useRef(null);
@@ -13,24 +13,52 @@ const AboutSection = () => {
   const leaders = [
     {
       icon: Crown,
-      role: "Founder & President",
+      role: "Founder / CEO",
       name: "Dr. Priyanka Verma",
-      description: "With a passion for education and a vision to democratize knowledge, Dr. Priyanka Verma established APRA to bridge the gap between academic excellence and practical wisdom.",
-      detail: "Her expertise spans multiple disciplines, and she has dedicated her career to mentoring the next generation of leaders, thinkers, and innovators through comprehensive publications and hands-on workshops."
-    },
-    {
-      icon: User,
-      role: "Vice-President",
-      name: "Dr. Keemti Gaur",
-      description: "Dr. Keemti Gaur brings invaluable expertise and leadership to APRA, playing a pivotal role in shaping the organization's strategic direction and educational initiatives.",
-      detail: "With a deep commitment to academic excellence and community development, Dr. Gaur works tirelessly to expand APRA's reach and impact, ensuring that quality knowledge reaches every corner of society."
+      description: "Owner and Strategic Leader of APRA, defining the overall vision and directing the company's high-level strategy.",
+      detail: "With a passion for education and a vision to democratize knowledge, she sets long-term goals and leads the organization towards excellence in publishing and education."
     },
     {
       icon: Briefcase,
-      role: "Director",
+      role: "Chief Operating Manager",
+      name: "Mr. Rishi Verma",
+      description: "Operations Lead managing day-to-day business operations.",
+      detail: "Ensures all departments are functioning efficiently and coordinates cross-functional activities to maintain seamless organizational workflow."
+    },
+    {
+      icon: Scale,
+      role: "Legal & Finance Officer",
+      name: "Mrs. Priyanka Goel",
+      description: "Compliance and Fiscal Manager overseeing legal matters and financial management.",
+      detail: "Handles contract management, regulatory compliance, accounting, bookkeeping, taxation, and overall fiscal responsibility."
+    },
+    {
+      icon: PenLine,
+      role: "Editorial Head",
       name: "Mrs. Himani Raizada",
-      description: "Mrs. Himani Raizada serves as a key driving force behind APRA's operational excellence and strategic growth initiatives.",
-      detail: "Her dedication to organizational development and commitment to APRA's mission ensures that every publication and workshop meets the highest standards of quality and impact."
+      description: "Content and Creative Supervisor overseeing all publications.",
+      detail: "Supervises content writing, editing, and graphic design to ensure every publication meets the highest quality standards."
+    },
+    {
+      icon: GraduationCap,
+      role: "Training Head",
+      name: "Dr. Keemti Gaur",
+      description: "Educational Programs Lead planning professional development initiatives.",
+      detail: "Organizes workshops, seminars, and specialized training programs that empower participants with practical skills and knowledge."
+    },
+    {
+      icon: TrendingUp,
+      role: "Marketing & Sales Manager",
+      name: "Mrs. Namita Jend",
+      description: "Business Growth Lead managing promotion and client outreach.",
+      detail: "Develops and executes revenue generation strategies while building strong relationships with clients and partners."
+    },
+    {
+      icon: ClipboardCheck,
+      role: "Secretary / Administrative Officer",
+      name: "Mr. Ajay",
+      description: "Office Administration managing official documentation.",
+      detail: "Handles corporate correspondence and general office management to ensure smooth administrative operations."
     }
   ];
 
