@@ -15,7 +15,7 @@ const AboutSection = () => {
       icon: Crown,
       role: "Founder / CEO",
       name: "Dr. Priyanka Verma",
-      description: "Owner and Strategic Leader of APRA, defining the overall vision and directing the company's high-level strategy.",
+      description: "Owner and Strategic Leader of APRA, defining the overall vision and directing all strategies.",
       detail: "With a passion for education and a vision to democratize knowledge, she sets long-term goals and leads the organization towards excellence in publishing and education."
     },
     {
