@@ -34,7 +34,7 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/70 backdrop-blur-2xl border-b border-border/40"
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -45,19 +45,22 @@ const Header = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            <img
-              src={apraLogo}
-              alt="APRA Logo"
-              className="h-12 w-12 rounded-full object-cover shadow-md"
-            />
+            <div className="relative">
+              <img
+                src={apraLogo}
+                alt="APRA Logo"
+                className="h-12 w-12 rounded-full object-cover ring-2 ring-primary/20 shadow-md"
+              />
+              <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-primary/10" />
+            </div>
             <div className="hidden sm:block text-left">
-              <h1 className="text-xl font-serif font-bold text-foreground">APRA</h1>
-              <p className="text-xs text-muted-foreground tracking-wider">Group of Knowledge</p>
+              <h1 className="text-xl font-serif font-bold text-foreground tracking-tight">APRA</h1>
+              <p className="text-[10px] text-muted-foreground tracking-[0.2em] uppercase font-medium">Group of Knowledge</p>
             </div>
           </motion.button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link, index) => (
               <motion.button
                 key={link.name}
@@ -65,19 +68,20 @@ const Header = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 + 0.3 }}
-                className="relative text-sm font-medium text-muted-foreground hover:text-foreground transition-colors group"
+                className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-primary/5 group"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary rounded-full transition-all duration-300 group-hover:w-6" />
               </motion.button>
             ))}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.6 }}
+              className="ml-2"
             >
               <Button 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full px-6 shadow-md hover:shadow-lg transition-all duration-300"
                 onClick={() => handleNavClick("contact")}
               >
                 Get in Touch
@@ -87,7 +91,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 rounded-full hover:bg-primary/5 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -103,9 +107,9 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-t border-border"
+            className="md:hidden bg-background/95 backdrop-blur-2xl border-t border-border/40"
           >
-            <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
+            <nav className="container mx-auto px-4 py-6 flex flex-col gap-1">
               {navLinks.map((link) => (
                 <button
                   key={link.name}
@@ -113,13 +117,13 @@ const Header = () => {
                     setIsOpen(false);
                     handleNavClick(link.section, link.isPage, link.path);
                   }}
-                  className="text-foreground hover:text-primary transition-colors py-2 text-left"
+                  className="text-foreground hover:text-primary hover:bg-primary/5 transition-all py-3 px-4 text-left rounded-xl font-medium"
                 >
                   {link.name}
                 </button>
               ))}
               <Button 
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full mt-4 shadow-md"
                 onClick={() => {
                   setIsOpen(false);
                   handleNavClick("contact");
