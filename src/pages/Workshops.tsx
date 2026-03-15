@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import conferenceFlyer1 from "@/assets/events/conference-flyer-1.jpeg";
 import conferenceFlyer2 from "@/assets/events/conference-flyer-2.jpeg";
+import fdpAiEducation from "@/assets/events/fdp-ai-education.jpeg";
 
 const features = [
   {
