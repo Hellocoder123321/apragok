@@ -180,6 +180,7 @@ const Workshops = () => {
       </section>
 
 
+      {/* Past Events Section */}
       <section className="py-16 bg-accent/10">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -191,121 +192,116 @@ const Workshops = () => {
           >
             <Badge variant="outline" className="mb-4 border-muted-foreground/50">
               <Calendar size={14} className="mr-1" />
-              Past Event
+              Past Events
             </Badge>
             <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
-              AI Powered Education: Enhancing Student Engagement and Outcomes
+              Our Past Events
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mb-2">
-              Faculty Development Program (FDP) — Step Into the Future of Teaching: Be an AI-Enabled Educator
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              A look back at the workshops, conferences, and training programs we've organized.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground mt-4">
-              <span className="flex items-center gap-1">
-                <Calendar size={16} className="text-primary" />
-                April 4, 2026 · 11:00 AM – 5:30 PM
-              </span>
-              <span className="flex items-center gap-1">
-                <MapPin size={16} className="text-primary" />
-                Online (Google Meet)
-              </span>
-            </div>
           </motion.div>
 
-          <div className="max-w-3xl mx-auto mb-10">
+          {/* Event 1: FDP AI Education */}
+          <div className="max-w-5xl mx-auto mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="rounded-xl overflow-hidden shadow-lg"
+              className="text-center mb-6"
             >
-              <img 
-                src={fdpAiEducation} 
-                alt="FDP - AI Powered Education flyer" 
-                className="w-full h-auto"
-              />
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-2">
+                AI Powered Education: Enhancing Student Engagement and Outcomes
+              </h3>
+              <p className="text-muted-foreground mb-2">
+                Faculty Development Program (FDP) — Step Into the Future of Teaching: Be an AI-Enabled Educator
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
+                <span className="flex items-center gap-1">
+                  <Calendar size={16} className="text-primary" />
+                  April 4, 2026 · 11:00 AM – 5:30 PM
+                </span>
+                <span className="flex items-center gap-1">
+                  <MapPin size={16} className="text-primary" />
+                  Online (Google Meet)
+                </span>
+              </div>
             </motion.div>
+            <div className="max-w-3xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="rounded-xl overflow-hidden shadow-lg"
+              >
+                <img 
+                  src={fdpAiEducation} 
+                  alt="FDP - AI Powered Education flyer" 
+                  className="w-full h-auto"
+                />
+              </motion.div>
+            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-center"
-          >
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 py-6 text-lg"
-              asChild
-            >
-              <Link to="/gallery">
-                View Event Gallery
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
+          {/* Divider */}
+          <div className="max-w-5xl mx-auto mb-16 border-t border-border/50" />
 
-      {/* Past Events Section */}
-      <section className="py-16 bg-primary/5">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <Badge variant="outline" className="mb-4 border-muted-foreground/50">
-              <Calendar size={14} className="mr-1" />
-              Past Event
-            </Badge>
-            <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
-              Two-Day Future-Forward Research Conference
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mb-2">
-              Global Trends and Interdisciplinary Innovation
-            </p>
-            <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
-              <span className="flex items-center gap-1">
-                <Calendar size={16} className="text-primary" />
-                January 16-17, 2026
-              </span>
-              <span className="flex items-center gap-1">
-                <MapPin size={16} className="text-primary" />
-                Google Meet Platform
-              </span>
-            </div>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
+          {/* Event 2: Two-Day Research Conference */}
+          <div className="max-w-5xl mx-auto mb-10">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="rounded-xl overflow-hidden shadow-lg"
+              className="text-center mb-6"
             >
-              <img 
-                src={conferenceFlyer1} 
-                alt="Conference flyer - Call for papers and important dates" 
-                className="w-full h-auto"
-              />
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-2">
+                Two-Day Future-Forward Research Conference
+              </h3>
+              <p className="text-muted-foreground mb-2">
+                Global Trends and Interdisciplinary Innovation
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
+                <span className="flex items-center gap-1">
+                  <Calendar size={16} className="text-primary" />
+                  January 16-17, 2026
+                </span>
+                <span className="flex items-center gap-1">
+                  <MapPin size={16} className="text-primary" />
+                  Google Meet Platform
+                </span>
+              </div>
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="rounded-xl overflow-hidden shadow-lg"
-            >
-              <img 
-                src={conferenceFlyer2} 
-                alt="Conference flyer - Submission guidelines and sub-themes" 
-                className="w-full h-auto"
-              />
-            </motion.div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="rounded-xl overflow-hidden shadow-lg"
+              >
+                <img 
+                  src={conferenceFlyer1} 
+                  alt="Conference flyer - Call for papers and important dates" 
+                  className="w-full h-auto"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="rounded-xl overflow-hidden shadow-lg"
+              >
+                <img 
+                  src={conferenceFlyer2} 
+                  alt="Conference flyer - Submission guidelines and sub-themes" 
+                  className="w-full h-auto"
+                />
+              </motion.div>
+            </div>
           </div>
 
           <motion.div
