@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { Users, BookOpen, Award, Target, Lightbulb, Images, Calendar, MapPin, ArrowLeft } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Users, BookOpen, Award, Target, Lightbulb, Images, Calendar, MapPin, ArrowLeft, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
