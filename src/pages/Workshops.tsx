@@ -37,6 +37,13 @@ const features = [
 ];
 
 const Workshops = () => {
+  const [expandedEvent, setExpandedEvent] = useState<string | null>(null);
+
+  const toggleEvent = (id: string) => {
+    setExpandedEvent(prev => prev === id ? null : id);
+  };
+
+  return (
   return (
     <div className="min-h-screen bg-background">
       <Header />
