@@ -9,6 +9,8 @@ import Footer from "@/components/Footer";
 import conferenceFlyer1 from "@/assets/events/conference-flyer-1.jpeg";
 import conferenceFlyer2 from "@/assets/events/conference-flyer-2.jpeg";
 import fdpAiEducation from "@/assets/events/fdp-ai-education.jpeg";
+import spectrumPage1 from "@/assets/events/spectrum-conference-page1.jpg";
+import spectrumPage2 from "@/assets/events/spectrum-conference-page2.jpg";
 
 const features = [
   {
