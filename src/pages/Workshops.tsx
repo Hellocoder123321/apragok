@@ -7,10 +7,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import conferenceFlyer1 from "@/assets/events/conference-flyer-1.jpeg";
-import conferenceFlyer2 from "@/assets/events/conference-flyer-2.jpeg";
-import fdpAiEducationPage1 from "@/assets/events/fdp-ai-education-page1.png";
-import fdpAiEducationPage2 from "@/assets/events/fdp-ai-education-page2.png";
+import conferenceFlyer1 from "@/assets/events/conference-flyer-1.jpg";
+import conferenceFlyer2 from "@/assets/events/conference-flyer-2.jpg";
+import fdpAiEducationPage1 from "@/assets/events/fdp-ai-education-page1.jpg";
+import fdpAiEducationPage2 from "@/assets/events/fdp-ai-education-page2.jpg";
 import spectrumPage1 from "@/assets/events/spectrum-conference-page1.jpg";
 import spectrumPage2 from "@/assets/events/spectrum-conference-page2.jpg";
 
