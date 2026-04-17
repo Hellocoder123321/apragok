@@ -7,10 +7,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import conferenceFlyer1 from "@/assets/events/conference-flyer-1.jpeg";
-import conferenceFlyer2 from "@/assets/events/conference-flyer-2.jpeg";
-import fdpAiEducationPage1 from "@/assets/events/fdp-ai-education-page1.png";
-import fdpAiEducationPage2 from "@/assets/events/fdp-ai-education-page2.png";
+import conferenceFlyer1 from "@/assets/events/conference-flyer-1.jpg";
+import conferenceFlyer2 from "@/assets/events/conference-flyer-2.jpg";
+import fdpAiEducationPage1 from "@/assets/events/fdp-ai-education-page1.jpg";
+import fdpAiEducationPage2 from "@/assets/events/fdp-ai-education-page2.jpg";
 import spectrumPage1 from "@/assets/events/spectrum-conference-page1.jpg";
 import spectrumPage2 from "@/assets/events/spectrum-conference-page2.jpg";
 
@@ -135,6 +135,8 @@ const Workshops = () => {
                 src={spectrumPage1} 
                 alt="Spectrum of Knowledge Conference 2026 - Call for Papers" 
                 className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
               />
             </motion.div>
             <motion.div
@@ -148,6 +150,8 @@ const Workshops = () => {
                 src={spectrumPage2} 
                 alt="Spectrum of Knowledge Conference 2026 - Guidelines and Sub-themes" 
                 className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
               />
             </motion.div>
           </div>
@@ -244,6 +248,8 @@ const Workshops = () => {
                           src={fdpAiEducationPage1} 
                           alt="FDP - AI Powered Education flyer page 1" 
                           className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
                         />
                       </div>
                       <div className="rounded-xl overflow-hidden shadow-lg">
@@ -251,6 +257,8 @@ const Workshops = () => {
                           src={fdpAiEducationPage2} 
                           alt="FDP - AI Powered Education flyer page 2" 
                           className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
                         />
                       </div>
                     </div>
@@ -294,6 +302,8 @@ const Workshops = () => {
                           src={conferenceFlyer1} 
                           alt="Conference flyer - Call for papers and important dates" 
                           className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
                         />
                       </div>
                       <div className="rounded-xl overflow-hidden shadow-lg">
@@ -301,6 +311,8 @@ const Workshops = () => {
                           src={conferenceFlyer2} 
                           alt="Conference flyer - Submission guidelines and sub-themes" 
                           className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
                         />
                       </div>
                     </div>
