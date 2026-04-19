@@ -17,8 +17,22 @@ import workshop22 from "@/assets/gallery/workshop-22.jpeg";
 
 import conferenceDay1 from "@/assets/gallery/conference-day1.jpeg";
 import conferenceDay2 from "@/assets/gallery/conference-day2.jpeg";
+import fdpPhoto1 from "@/assets/events/fdp-ai-education-photo1.jpeg";
+import fdpPhoto2 from "@/assets/events/fdp-ai-education-photo2.jpg";
 
 const galleryImages = [
+  {
+    id: 27,
+    title: "FDP: AI Powered Education - Session",
+    description: "Faculty Development Program on AI in Education (April 4, 2026)",
+    image: fdpPhoto1,
+  },
+  {
+    id: 28,
+    title: "FDP: AI Powered Education - Highlights",
+    description: "Moments from the AI-Enabled Educator program (April 4, 2026)",
+    image: fdpPhoto2,
+  },
   {
     id: 25,
     title: "Future Forward Research Conference - Day 1",
