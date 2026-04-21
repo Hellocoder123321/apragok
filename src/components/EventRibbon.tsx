@@ -1,10 +1,39 @@
 import { Link } from "react-router-dom";
-import { Calendar, MapPin, ArrowRight, Sparkles } from "lucide-react";
+import { Calendar, MapPin, ArrowRight, Sparkles, CalendarOff } from "lucide-react";
+
+// Set to null when there is no upcoming event
+const upcomingEvent: {
+  title: string;
+  date: string;
+  location: string;
+  href: string;
+} | null = {
+  title: "Spectrum of Knowledge Conference 2026",
+  date: "May 23, 2026",
+  location: "National Prestige School, Ghaziabad",
+  href: "/workshops",
+};
 
 const EventRibbon = () => {
+  if (!upcomingEvent) {
+    return (
+      <div
+        className="fixed top-0 left-0 right-0 z-[60] block bg-muted text-muted-foreground border-b border-border"
+        aria-label="No upcoming event"
+      >
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="flex items-center justify-center gap-2 py-2 text-xs sm:text-sm font-medium">
+            <CalendarOff size={14} />
+            <span>No upcoming event</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <Link
-      to="/workshops"
+      to={upcomingEvent.href}
       className="fixed top-0 left-0 right-0 z-[60] block bg-gradient-to-r from-primary via-primary/90 to-primary text-primary-foreground shadow-md hover:shadow-lg transition-shadow group"
       aria-label="View upcoming event details"
     >
@@ -14,16 +43,14 @@ const EventRibbon = () => {
             <Sparkles size={12} />
             Upcoming
           </span>
-          <span className="font-serif font-semibold truncate">
-            Spectrum of Knowledge Conference 2026
-          </span>
+          <span className="font-serif font-semibold truncate">{upcomingEvent.title}</span>
           <span className="hidden md:inline-flex items-center gap-1 opacity-90">
             <Calendar size={14} />
-            May 23, 2026
+            {upcomingEvent.date}
           </span>
           <span className="hidden lg:inline-flex items-center gap-1 opacity-90">
             <MapPin size={14} />
-            National Prestige School, Ghaziabad
+            {upcomingEvent.location}
           </span>
           <span className="inline-flex items-center gap-1 font-semibold underline-offset-2 group-hover:underline">
             Details
