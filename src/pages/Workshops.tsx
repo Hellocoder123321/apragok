@@ -467,6 +467,7 @@ const Workshops = () => {
       </section>
 
       <Footer />
+      <Lightbox src={lightbox?.src ?? null} alt={lightbox?.alt} onClose={() => setLightbox(null)} />
     </div>
   );
 };
