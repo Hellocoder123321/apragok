@@ -117,14 +117,6 @@ const Footer = () => {
             <p className="text-xs opacity-40 tracking-wide">
               © {currentYear} APRA: Group of Knowledge. All rights reserved.
             </p>
-            <a 
-              href="https://wa.me/+919558295218" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-xs opacity-40 hover:opacity-80 transition-all cursor-pointer tracking-wide"
-            >
-              Want a website like this?
-            </a>
           </div>
         </div>
       </div>
