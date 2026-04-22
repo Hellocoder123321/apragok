@@ -85,7 +85,7 @@ const HeroSection = () => {
       timerRef.current = window.setTimeout(async () => {
         const nextIndex = (currentSlide + 1) % slideshowImages.length;
         setIsPreloading(true);
-        await preloadImage(slideshowImages[nextIndex]);
+        await preloadImage(pickSrc(slideshowImages[nextIndex]));
         if (cancelled) return;
         setIsPreloading(false);
         setCurrentSlide(nextIndex);
@@ -96,7 +96,7 @@ const HeroSection = () => {
 
     // Warm up the image after next so transitions feel instant
     const lookahead = (currentSlide + 2) % slideshowImages.length;
-    preloadImage(slideshowImages[lookahead]);
+    preloadImage(pickSrc(slideshowImages[lookahead]));
 
     return () => {
       cancelled = true;
