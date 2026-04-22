@@ -118,7 +118,7 @@ const HeroSection = () => {
             className="absolute inset-0"
           >
             <img
-              src={slideshowImages[currentSlide]}
+              src={pickSrc(slideshowImages[currentSlide])}
               alt="Workshop background"
               className="w-full h-full object-cover"
               decoding="async"
