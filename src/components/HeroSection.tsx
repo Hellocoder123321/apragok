@@ -20,8 +20,46 @@ import workshop13 from "@/assets/gallery/workshop-13.jpeg";
 import workshop14 from "@/assets/gallery/workshop-14.jpeg";
 import workshop15 from "@/assets/gallery/workshop-15.jpeg";
 
-const allImages = [workshop1, workshop2, workshop3, workshop4, workshop5, workshop6, workshop7, workshop8, workshop9, workshop10, workshop11, workshop12, workshop13, workshop14, workshop15];
+import workshop1Mobile from "@/assets/gallery/workshop-1-mobile.jpeg";
+import workshop2Mobile from "@/assets/gallery/workshop-2-mobile.jpeg";
+import workshop3Mobile from "@/assets/gallery/workshop-3-mobile.jpeg";
+import workshop4Mobile from "@/assets/gallery/workshop-4-mobile.jpeg";
+import workshop5Mobile from "@/assets/gallery/workshop-5-mobile.jpeg";
+import workshop6Mobile from "@/assets/gallery/workshop-6-mobile.jpeg";
+import workshop7Mobile from "@/assets/gallery/workshop-7-mobile.jpeg";
+import workshop8Mobile from "@/assets/gallery/workshop-8-mobile.jpeg";
+import workshop9Mobile from "@/assets/gallery/workshop-9-mobile.jpeg";
+import workshop10Mobile from "@/assets/gallery/workshop-10-mobile.jpeg";
+import workshop11Mobile from "@/assets/gallery/workshop-11-mobile.jpeg";
+import workshop12Mobile from "@/assets/gallery/workshop-12-mobile.jpeg";
+import workshop13Mobile from "@/assets/gallery/workshop-13-mobile.jpeg";
+import workshop14Mobile from "@/assets/gallery/workshop-14-mobile.jpeg";
+import workshop15Mobile from "@/assets/gallery/workshop-15-mobile.jpeg";
+
+type Slide = { desktop: string; mobile: string };
+const allImages: Slide[] = [
+  { desktop: workshop1, mobile: workshop1Mobile },
+  { desktop: workshop2, mobile: workshop2Mobile },
+  { desktop: workshop3, mobile: workshop3Mobile },
+  { desktop: workshop4, mobile: workshop4Mobile },
+  { desktop: workshop5, mobile: workshop5Mobile },
+  { desktop: workshop6, mobile: workshop6Mobile },
+  { desktop: workshop7, mobile: workshop7Mobile },
+  { desktop: workshop8, mobile: workshop8Mobile },
+  { desktop: workshop9, mobile: workshop9Mobile },
+  { desktop: workshop10, mobile: workshop10Mobile },
+  { desktop: workshop11, mobile: workshop11Mobile },
+  { desktop: workshop12, mobile: workshop12Mobile },
+  { desktop: workshop13, mobile: workshop13Mobile },
+  { desktop: workshop14, mobile: workshop14Mobile },
+  { desktop: workshop15, mobile: workshop15Mobile },
+];
 const slideshowImages = [...allImages].sort(() => Math.random() - 0.5);
+
+const pickSrc = (slide: Slide) =>
+  typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches
+    ? slide.mobile
+    : slide.desktop;
 
 const SLIDE_INTERVAL = 5500;
 
