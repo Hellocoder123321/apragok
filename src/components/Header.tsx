@@ -35,10 +35,10 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-9 sm:top-10 left-0 right-0 z-50 bg-background/70 backdrop-blur-2xl border-b border-border/40"
+      className="fixed top-7 sm:top-9 left-0 right-0 z-50 bg-background/70 backdrop-blur-2xl border-b border-border/40"
     >
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-3 sm:px-4 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <motion.button
             onClick={() => handleNavClick("home")}
@@ -50,7 +50,7 @@ const Header = () => {
               <img
                 src={apraLogo}
                 alt="APRA Logo"
-                className="h-12 w-12 rounded-full object-cover ring-2 ring-primary/20 shadow-md"
+                className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover ring-2 ring-primary/20 shadow-md"
               />
               <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-primary/10" />
             </div>

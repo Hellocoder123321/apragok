@@ -53,14 +53,14 @@ const Workshops = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="pt-28 sm:pt-32 pb-12 sm:pb-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 right-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
           <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent rounded-full blur-3xl" />
         </div>
         
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6 text-sm">
             <ArrowLeft size={18} />
             <span>Back to Home</span>
           </Link>
@@ -74,11 +74,11 @@ const Workshops = () => {
               <Users size={14} className="mr-1" />
               Workshops & Conferences
             </Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-5 sm:mb-6 leading-tight">
               <span className="text-foreground">Transform Your </span>
               <span className="text-primary">Potential</span>
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
               Join our expertly crafted workshops and training sessions designed to empower 
               individuals and organizations with practical skills and knowledge.
             </p>
@@ -109,7 +109,7 @@ const Workshops = () => {
               <Calendar size={14} className="mr-1" />
               Upcoming Event
             </Badge>
-            <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-foreground mb-3 sm:mb-4">
               Spectrum of Knowledge Conference 2026
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-2">
@@ -169,10 +169,10 @@ const Workshops = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-center space-y-4"
           >
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 py-6 text-lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 sm:px-10 py-5 sm:py-6 text-sm sm:text-lg"
                 asChild
               >
                 <a href="https://forms.gle/2SnropdcJtWfrisN7" target="_blank" rel="noopener noreferrer">
@@ -182,7 +182,7 @@ const Workshops = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full px-10 py-6 text-lg"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full px-6 sm:px-10 py-5 sm:py-6 text-sm sm:text-lg"
                 asChild
               >
                 <a href="https://forms.gle/UK86PXQbwZuwuDVH7" target="_blank" rel="noopener noreferrer">
@@ -226,9 +226,9 @@ const Workshops = () => {
               onClick={() => toggleEvent("fdp")}
               className="w-full text-center group cursor-pointer"
             >
-              <h3 className="text-2xl font-serif font-bold text-primary hover:text-primary/80 transition-colors mb-1 inline-flex items-center gap-2">
-                AI Powered Education: Enhancing Student Engagement and Outcomes
-                <ChevronDown size={20} className={`transition-transform duration-300 ${expandedEvent === "fdp" ? "rotate-180" : ""}`} />
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary hover:text-primary/80 transition-colors mb-1 inline-flex items-center gap-2 px-2">
+                <span>AI Powered Education: Enhancing Student Engagement and Outcomes</span>
+                <ChevronDown size={20} className={`shrink-0 transition-transform duration-300 ${expandedEvent === "fdp" ? "rotate-180" : ""}`} />
               </h3>
               <p className="text-muted-foreground text-sm">
                 April 4, 2026 · Online (Google Meet)
@@ -286,9 +286,9 @@ const Workshops = () => {
               onClick={() => toggleEvent("conference")}
               className="w-full text-center group cursor-pointer"
             >
-              <h3 className="text-2xl font-serif font-bold text-primary hover:text-primary/80 transition-colors mb-1 inline-flex items-center gap-2">
-                Two-Day Future-Forward Research Conference
-                <ChevronDown size={20} className={`transition-transform duration-300 ${expandedEvent === "conference" ? "rotate-180" : ""}`} />
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary hover:text-primary/80 transition-colors mb-1 inline-flex items-center gap-2 px-2">
+                <span>Two-Day Future-Forward Research Conference</span>
+                <ChevronDown size={20} className={`shrink-0 transition-transform duration-300 ${expandedEvent === "conference" ? "rotate-180" : ""}`} />
               </h3>
               <p className="text-muted-foreground text-sm">
                 January 16-17, 2026 · Google Meet Platform
