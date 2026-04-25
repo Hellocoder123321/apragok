@@ -50,7 +50,7 @@ const Header = () => {
               <img
                 src={apraLogo}
                 alt="APRA Logo"
-                className="h-12 w-12 rounded-full object-cover ring-2 ring-primary/20 shadow-md"
+                className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover ring-2 ring-primary/20 shadow-md"
               />
               <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-primary/10" />
             </div>
