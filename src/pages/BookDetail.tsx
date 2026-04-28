@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import emergingTrendsEducation from "@/assets/books/emerging-trends-education.jpeg";
 import dincharyaSanatanDharma from "@/assets/books/dincharya-sanatan-dharma.jpeg";
+import futureForwardResearch from "@/assets/books/future-forward-research.jpeg";
 
 const booksData = [
   {
